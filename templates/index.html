@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>WebReconGenius - Iniciar Escaneo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel {
+      background-color: #2a2a40;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 255, 200, 0.2);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .panel h1 {
+      color: #66ccff;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .panel p {
+      font-size: 1rem;
+      color: #bbbbbb;
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      background-color: #1e1e2f;
+      border: 1px solid #66ccff;
+      color: white;
+    }
+
+    .form-control::placeholder {
+      color: #888;
+    }
+
+    .btn-scan {
+      background-color: #66ccff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-scan:hover {
+      background-color: #33aaff;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    #loading {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="panel">
+    <h1>WebReconGenius</h1>
+    <p>Plataforma local de reconocimiento web para pentesters. Ingresa un dominio para iniciar el análisis completo.</p>
+
+    <form method="POST" action="/" onsubmit="showLoading()">
+      <input type="text" class="form-control form-control-lg mb-3" name="domain" placeholder="ej: ejemplo.com" required>
+      <button type="submit" class="btn btn-scan btn-lg w-100">🚀 Iniciar Escaneo</button>
+    </form>
+
+    <div id="loading">
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-2">Escaneando... Esto puede tardar unos segundos ⏳</p>
+    </div>
+
+    <div class="footer">Desarrollado por un hacker ético, para hackers éticos 🧠</div>
+  </div>
+
+  <script>
+    function showLoading() {
+      document.querySelector('#loading').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
