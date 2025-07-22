@@ -22,3 +22,23 @@ Con solo ingresar un dominio, ejecuta múltiples procesos de recolección de inf
 - 💻 Interfaz local accesible desde navegador
 
 ---
+
+## Requisitos
+
+- **Python 3.8+**
+- Herramientas externas instaladas:
+  - [`nmap`](https://nmap.org/)
+  - [`whatweb`](https://github.com/urbanadventurer/WhatWeb)
+  - [`subfinder`](https://github.com/projectdiscovery/subfinder)
+- Librerías de Python:
+  ```bash
+  pip install flask httpx beautifulsoup4
+
+
+  ## INSTALACION Y USO
+
+git clone https://github.com/Stealthy-lab/WebReconGenius
+cd WebReconGenius
+python3 app.py
+Accede en tu navegador e ingresa http://localhost:5000
+Ingresa un dominio
