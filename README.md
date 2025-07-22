@@ -37,6 +37,8 @@ Con solo ingresar un dominio, ejecuta múltiples procesos de recolección de inf
 
   ## INSTALACION Y USO
 
+ ```bash
+
 git clone https://github.com/Stealthy-lab/WebReconGenius
 cd WebReconGenius
 python3 app.py
