@@ -2,10 +2,8 @@
 $payload = 'Start-Process notepad.exe'
 $payloadPath = "C:\ProgramData\payload.ps1"
 
-# Guardar el script en ProgramData (visible a todos)
 Set-Content -Path $payloadPath -Value $payload
 
-# Crear acceso directo en Startup global
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\persistence.lnk")
 
